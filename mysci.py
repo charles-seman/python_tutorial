@@ -59,5 +59,4 @@ with open(filename, 'r') as datafile:
         split_line = line.split() #(',') or ('/t')
         data['date'].append(split_line[0])
         data['time'].append(split_line[1])
-        data['tempout'].append(split_line[2])
-
+        data['tempout'].append(float(split_line[2]))
