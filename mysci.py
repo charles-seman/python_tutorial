@@ -3,10 +3,10 @@
 filename = "data/wxobs20170821.txt"
 
 # Column names and column indices to read
-columns = {'date':0, 'time':1, 'tempout':2}
+columns = {'date':0, 'time':1, 'tempout':2, 'windspeed':7}
 
 # Data types for each column (only if non-string)
-types = {'tempout':float}
+types = {'tempout':float, 'windspeed':float}
 
 # Initialize my data variable
 data = {}
@@ -16,7 +16,6 @@ for column in columns:
 with open(filename, 'r') as datafile:
 
     # read the first three lines (header)
-    #for i in [ 0, 1, 2 ]:
     for _ in range(3):
         #print(_)
         datafile.readline()
